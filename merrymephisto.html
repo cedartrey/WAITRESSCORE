@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAITRESS</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Sekuya",cursive;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+color:white;
+background-color:#000;
+background-image:url("2.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+
+body:before{
+content:"";
+position:fixed;
+top:-15px;
+left:-15px;
+width:calc(100% + 30px);
+height:calc(100% + 30px);
+background-image:url("waitress.gif");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+filter:blur(4px);
+z-index:-2;
+}
+
+body:after{
+content:"";
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.3);
+z-index:-1;
+}
+
+.page{
+width:100vw;
+height:100vh;
+margin:0 auto;
+padding-top:14px;
+position:relative;
+}
+
+.title{
+width:100vw;
+height:18vh;
+background:rgba(15,15,15,.88);
+border:4px ridge #9d1717;
+text-align:center;
+}
+
+.title h1{
+font-size:40px;
+line-height:44px;
+color:#bd1515;
+}
+
+.title p{
+font-size:10px;
+color:white;
+}
+
+.info{
+width:100vw;
+height:18vh;
+margin-top:13px;
+display:flex;
+gap:10px;
+}
+
+.picture{
+width:7%;
+height:80px;
+padding:10px;
+border:4px ridge #aaa;
+background-image:url("waitress.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-color:#050505;
+}
+
+.description{
+width:30%;
+height:80px;
+border:3px ridge #888;
+background:rgba(10,10,10,.78);
+padding:10px;
+font-size:11px;
+line-height:14px;
+}
+
+.description .red{
+color:#c31616;
+}
+
+.songs{
+position:fixed;
+left:0;
+bottom:80px;
+width:100%;
+display:flex;
+flex-direction:column;
+}
+
+.song{
+height:16vh;
+width:40%;
+margin:0 60% 0 auto;
+background:rgba(15,15,15,.82);
+border:4px ridge #777;
+display:flex;
+align-items:center;
+padding:5px 8px;
+position:relative;
+}
+
+.song:nth-child(4){
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+height:80px;
+z-index:3;
+background:#181818;
+border:1px solid #383838;
+justify-content:space-between;
+padding:10px 24px;
+}
+
+.songname{
+width:auto;
+font-size:11px;
+line-height:14px;
+color:#eee;
+}
+
+.song audio{
+width:55%;
+height:40px;
+accent-color:#1ed760;
+filter:invert(1) hue-rotate(100deg);
+}
+
+.song-link{
+position:absolute;
+inset:0;
+z-index:2;
+}
+
+.quote{
+position:absolute;
+bottom:95px;
+left:120px;
+font-size:10px;
+}
+
+.quote span{
+color:#c71919;
+}
+
+.disc{
+position:fixed;
+right:16px;
+bottom:60px;
+width:200px;
+height:200px;
+object-fit:contain;
+transform-origin:50% 50%;
+animation:spin 4s linear infinite;
+z-index:4;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="title">
+<h1>WAITRESS</h1>
+<p>(THE BAND LOL)</p>
+</div>
+
+<div class="info">
+
+<div class="picture"></div>
+
+<div class="description">
+<span class="red">WAITRESS</span><br>
+MUSIC FOR PEOPLE WHO PROBABLY SHOULD<br>
+NOT BE TRUSTED.<br>
+"TRUST ME, I'M LYING."
+</div>
+
+</div>
+
+
+<div class="songs">
+
+<div class="song">
+<a class="song-link" href="rubio's lament.html" aria-label="Open Rubio's Lament"></a>
+
+<div class="songname">
+RUBIO'S LAMENT
+</div>
+
+</div>
+
+
+<div class="song">
+<a class="song-link" href="herecomethecats.html" aria-label="Open Here Come the Cats"></a>
+
+<div class="songname">
+HERE COME THE CATS
+</div>
+
+</div>
+
+
+<div class="song">
+<a class="song-link" href="merrymephisto.html" aria-label="Open Merry Mephisto"></a>
+
+<div class="songname">
+MERRY MEPHISTO
+</div>
+
+</div>
+
+
+<div class="song">
+
+<div class="songname">
+WE OWN YOU
+</div>
+
+<audio controls autoplay>
+<source src="Merry Mephisto.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+
+<img class="disc" src="merrymephistodisc.png" alt="Merry Mephisto disc">
+
+</div>
+
+</body>
+</html>
